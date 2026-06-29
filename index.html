@@ -1,34 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Android App</title>
-    <style>
-        body{
-            font-family:Arial,sans-serif;
-            text-align:center;
-            margin-top:80px;
-            background:#f5f5f5;
-        }
-        .btn{
-            display:inline-block;
-            padding:15px 30px;
-            background:#2196F3;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-            font-size:20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download CivicReport</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#f8fafc,#eef4ff);
+    color:#1e293b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:24px;
+}
+
+.container{
+    width:100%;
+    max-width:460px;
+}
+
+.card{
+    background:#fff;
+    border-radius:24px;
+    padding:42px 36px;
+    text-align:center;
+    box-shadow:
+        0 12px 40px rgba(15,23,42,.08),
+        0 2px 8px rgba(15,23,42,.04);
+    border:1px solid #e2e8f0;
+}
+
+.logo{
+    width:82px;
+    height:82px;
+    margin:0 auto 24px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    font-weight:700;
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.subtitle{
+    color:#64748b;
+    line-height:1.7;
+    font-size:15px;
+    margin-bottom:32px;
+}
+
+.download-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:16px 24px;
+    border-radius:14px;
+    text-decoration:none;
+    background:#2563eb;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    transition:.25s ease;
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(37,99,235,.35);
+}
+
+.download-btn:active{
+    transform:translateY(0);
+}
+
+.info{
+    margin-top:28px;
+    padding:18px;
+    border-radius:14px;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+}
+
+.info p{
+    color:#64748b;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.footer{
+    margin-top:24px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:13px;
+}
+
+@media(max-width:480px){
+
+    .card{
+        padding:32px 24px;
+        border-radius:20px;
+    }
+
+    h1{
+        font-size:1.7rem;
+    }
+
+    .download-btn{
+        font-size:16px;
+    }
+
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Download CivicReport</h1>
+<div class="container">
 
-<p>Click below to download the latest APK.</p>
+    <div class="card">
 
-<a class="btn" href="CivicReport.apk" download>
-Download APK
-</a>
+        <div class="logo">
+            📱
+        </div>
+
+        <h1>CivicReport</h1>
+
+        <p class="subtitle">
+            Download the latest Android APK and start reporting civic issues in your community.
+        </p>
+
+        <a href="CivicReport.apk" download class="download-btn">
+            ⬇ Download Latest APK
+        </a>
+
+        <div class="info">
+            <p>
+                Compatible with Android devices. If your browser asks for permission,
+                allow the download and install the APK after it finishes downloading.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        CivicReport • Report. Track. Improve.
+    </div>
+
+</div>
 
 </body>
 </html>
